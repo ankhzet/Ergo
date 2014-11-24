@@ -1,0 +1,59 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = tmpl.bpl SynkUp.exe testApp.exe ecv02dbview.exe wa.exe EasyR.exe ecv02.exe ecv_manga.dll ecv_import.dll ecv_reader.dll ecv_home.dll ecvupdater.exe ecvpatcher.exe ecv10.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+ecv02.exe: ecv02.dpr
+  $(DCC)
+
+wa.exe: ..\..\webapp\wa.dpr
+  $(DCC)
+
+ecv10.exe: ecv10.dpr
+  $(DCC)
+
+testApp.exe: ..\..\shell_notifier\testApp.dpr
+  $(DCC)
+
+ecv02dbview.exe: ecv02dbview.dpr
+  $(DCC)
+
+EasyR.exe: ..\..\easyredirect\EasyR.dpr
+  $(DCC)
+
+ecv_manga.dll: ecv_manga.dpr
+  $(DCC)
+
+ecv_import.dll: ecv_import.dpr
+  $(DCC)
+
+ecv_reader.dll: ecv_reader.dpr
+  $(DCC)
+
+ecv_home.dll: ecv_home.dpr
+  $(DCC)
+
+SynkUp.exe: ..\..\SynkUp\SynkUp.dpr
+  $(DCC)
+
+tmpl.bpl: ..\..\..\mycomponentpackages\tmpl.dpk
+  $(DCC)
+
+ecvupdater.exe: ecvupdater.dpr
+  $(DCC)
+
+ecvpatcher.exe: ecvpatcher.dpr
+  $(DCC)
+
+

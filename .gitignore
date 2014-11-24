@@ -1,0 +1,6 @@
+*.exe
+*.rsm
+*.stub
+~*
+*.ndb
+bin/data/previews/0*.bmp

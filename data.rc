@@ -1,0 +1,4 @@
+zreadyicon icon "res\ico2.ico"
+zloadicon icon "res\ico3.ico"
+;MAINICON icon "res\ico1.ico"
+; bumpv data bump_v.txt

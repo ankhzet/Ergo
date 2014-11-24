@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Ergo Proxy Manga Reader</title>
+<hta:application applicationname="ergo" caption="yes" navigable="no" innerborder="no" scroll="no" icon="html/x.ico" />
+
+<link rel="stylesheet" type="text/css" href="html/css/style.css" />
+<style type="text/css">
+* {
+margin: 0;
+padding: 0;
+height: 100%;
+}
+document, body {
+width: 100%;
+overflow: hidden;
+}
+</style>
+<script type="text/javascript" src="html/theme/js/jquery.js" ></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('iframe').load(function() {
+			var h = $('body').height();
+			$(this).css({width: "100%", height: h});
+			$(this).fadeIn();
+		}).error(function() {
+				$('.msg').html('Can\'t connect to Ergo: ');
+
+		});
+		$('iframe').attr('src', "http://192.168.118.1:2012");
+	});
+</script>
+</head>
+<body>
+	<iframe style="display: none; width: 100%; height: 100%;"></iframe>
+	<div class="msg"></div>
+</body>
+</html>
+

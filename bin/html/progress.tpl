@@ -1,0 +1,1 @@
+{progress: {chap: {%rchap%}, total: {%rtotal%}}, arch: {total: "{%archttl%}", added: "{%archnew%}"}, state: "{%state%}", jenres: ["{%jenres%}"], descr: "{%descr%}"}
